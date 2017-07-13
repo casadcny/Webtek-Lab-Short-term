@@ -38,16 +38,8 @@
   <div class="container-fluid">
 
     <ul class="nav navbar-nav">
-      <li class=""><a href="home.html">Home <span class="badge">24</span></a></li>
-      <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Messages <span class="badge">5</span></a>
-             <ul class="dropdown-menu">
-                 <li><a href="messages.html">View Messages</a></li>
-                 <li class="divider"></li>
-                 <li><a href="#">Message Requests</a></li>
-          </ul>
-      </li>
-        <li class=""><a href="friendreq.html">Friend Request <span class="badge">10</span></a></li>
+      <li class=""><a href="home.html">Home </a></li>
+        <li class=""><a href="friendreq.html">Friend Request </a></li>
         
     <form class="navbar-form navbar-left" role="search">
     <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
@@ -59,11 +51,9 @@
        <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile</a>
              <ul class="dropdown-menu">
-                 <li><a href="viewprof.html">View Profile</a></li>
+                 <li><a href="profile.html">View Profile</a></li>
                  <li class="divider"></li>
-                 <li><a href="#">Edit Profile</a></li>
-                 <li class="divider"></li>
-                  <li><a href="#">Log Out</a></li>
+                  <li><a href="logout.php?logout">Log Out</a></li>
           </ul>
       </li>
     </ul>
@@ -92,25 +82,27 @@
                 </div>
             </div>
           </div>
-                
-           
+           <div class="post-center">
          <div class="col-md-4">
       <div class="panel panel-default">
-              <div class="panel-body"> Tristan Villareal
-                <input type="email" class="form-control">
+              <div class="panel-body">
+              <div class="panel-user">
+              </div>
+                
               </div>
                 <div class="panel-footer">
                   <div class="btn-group">
                   <input type="email" class="form-comment">
                   <div class="pull-right">
+                  <div class="panel-comment">
+                  </div>
                     <button type="button" class="btn btn-success">Comment</button>
                   </div>
                   </div> 
                 </div>
             </div>
           </div>
-        
-         
+          </div>
           </div>  
 
                 
@@ -121,10 +113,11 @@
         <!-- End Main content -->
     
 </div>
-
+<!--
 <footer class="main-footer">
 <strong>Team Adidas &copy; 2017 </strong> All rights reserved.
 </footer>
+-->
 
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
