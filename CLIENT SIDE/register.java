@@ -1,4 +1,4 @@
-package adidas;
+package register;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,11 +26,11 @@ public class register extends HttpServlet {
 
         PrintWriter pw = response.getWriter(); 
         
-        String idnumber = request.getParameter("idno"); 
+        String idnumber = request.getParameter("idnumber"); 
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
-        String username = request.getParameter("username");
+        String email = request.getParameter("email");
         
 
         try {
@@ -40,14 +40,13 @@ public class register extends HttpServlet {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/socialnetwork", "root", "");
                         
             PreparedStatement ps;
-            ps = connection.prepareStatement("INSERT INTO user(idno, lastname, password, firstname, username ) values(?,?,?,?,?)");
+            ps = connection.prepareStatement("INSERT INTO user(idno=? OR  password=? OR firstname=? OR lastname=? OR  email=?)");
             
             ps.setString(1, idnumber);
-            ps.setString(2, lastname);
-            ps.setString(3, password);
-            ps.setString(4, firstname);
-            ps.setString(5, username);
-            
+            ps.setString(2, password);
+            ps.setString(3, firstname);
+            ps.setString(4, lastname);
+            ps.setString(5, email);
            
             
             int rs = ps.executeUpdate();
